@@ -8,6 +8,7 @@ def fetch_data_2014():
     for run in static:
         if run[3] == "2014":
             static_2014.append(run)
+    return static_2014
 
 def fetch_data_2013()
     static = open("trafficstatic.csv", newline="")
@@ -17,6 +18,7 @@ def fetch_data_2013()
     for run in static:
         if run[3] == "2013":
             static_2013.append(run)
+    return static_2013
 
 def fetch_data_2012()
     static = open("trafficstatic.csv", newline="")
@@ -26,3 +28,4 @@ def fetch_data_2012()
     for run in static:
         if run[3] == "2012":
             static_2012.append(run)
+    return static_2012
