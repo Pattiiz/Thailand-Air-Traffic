@@ -29,3 +29,51 @@ def fetch_data_2012():
         if run[3] == "2012":
             static_2012.append(run)
     return static_2012
+
+def top_cities():
+    """Return top cities"""
+    import csv
+    main_data = csv.reader(open('trafficstatic.csv', newline=''))
+    main_data = [row for row in main_data]
+    stat_inter_in = {}
+    stat_inter_out = {}
+    stat_dome_in = {}
+    stat_dome_out = {}
+    for i in main_data:
+        if i[1] == 'City' and i[2] == 'International':
+            stat_inter_in, stat_inter_out = stat_cities(i, stat_inter_in, stat_inter_out)
+        elif i[1] == 'City' and i[2] == 'Domestic':
+            stat_dome_in, stat_dome_out = stat_cities(i, stat_dome_in, stat_dome_out)
+    return ranking(stat_inter_in), ranking(stat_inter_out), ranking(merge(stat_dome_in, stat_dome_out))
+    
+def stat_cities(data, stat_in, stat_out):
+    """Return stats of cities"""
+    if data[5] in stat_in:
+        stat_in[data[5]] += int(data[6])
+    else:
+        stat_in[data[5]] = int(data[6])
+    if data[5] in stat_out:
+        stat_out[data[5]] += int(data[7])
+    else:
+        stat_out[data[5]] = int(data[7])
+    return stat_in, stat_out
+
+def ranking(d_stat):
+    """Return cities that ranked"""
+    name = sorted(d_stat, key=d_stat.get)
+    amount = sorted(list(d_stat.values()))
+    stat = []
+    pre_stat = []
+    for i in range(len(name)):
+        pre_stat.append(name[i])
+        pre_stat.append(amount[i])
+        stat.append(pre_stat)
+        pre_stat = []
+    return stat
+
+def merge(stat_1, stat_2):
+    """Return dic that merge form two dic"""
+    stat = {}
+    for i in list(stat_1):
+        stat[i] = stat_1[i] + stat_2[i]
+    return stat
