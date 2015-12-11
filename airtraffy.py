@@ -10,7 +10,7 @@ def fetch_data_2014():
             static_2014.append(run)
     return static_2014
 
-def fetch_data_2013()
+def fetch_data_2013():
     static = open("trafficstatic.csv", newline="")
     data = csv.reader(static)
     static = [run for run in data]
@@ -20,7 +20,7 @@ def fetch_data_2013()
             static_2013.append(run)
     return static_2013
 
-def fetch_data_2012()
+def fetch_data_2012():
     static = open("trafficstatic.csv", newline="")
     data = csv.reader(static)
     static = [run for run in data]
