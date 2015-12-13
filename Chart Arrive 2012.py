@@ -23,9 +23,9 @@ def summary_arrive_2012():
     summary_2012 = {}
     for run in arrive_2012:
         if run[0] in summary_2012:
-            summary_2012[run[0]] += run[1]
+            summary_2012[run[0]] += int(run[1])
         else:
-            summary_2012[run[0]] = run[1]
+            summary_2012[run[0]] = int(run[1])
     return summary_2012
 
 def month_list():
