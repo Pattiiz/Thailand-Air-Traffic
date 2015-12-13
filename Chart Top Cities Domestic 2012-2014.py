@@ -53,52 +53,15 @@ def merge(stat_1, stat_2):
         stat[i] = stat_1[i] + stat_2[i]
     return stat
 
-top_ten = top_cities()
-cities_2012, cities_2013, cities_2014 = top_ten[0], top_ten[1], top_ten[2]
+top_cities_domes = top_cities()
+top_cities_domes = top_cities_domes[2]
 fig = {
-    "data": [
-        {
-        "values" : [cities_2012[run][1] for run in range(len(cities_2012)-2,len(cities_2012)-12,-1)],
-        "labels" : [cities_2012[run][0] for run in range(len(cities_2012)-2,len(cities_2012)-12,-1)],
-        "domain" : {"x": [0, .48]},
-        "name" : "Arrive",
-        "hoverinfo" : "label+value+name",
-        "hole" : .4,
-        "type" : "pie"
-        },
-        {
-        "values" : [cities_2013[run][1] for run in range(len(cities_2013)-2,len(cities_2013)-12,-1)],
-        "labels" : [cities_2013[run][0] for run in range(len(cities_2013)-2,len(cities_2013)-12,-1)],
-        "domain" : {"x": [.52, 1]},
-        "name" : "Departure",
-        "hoverinfo" : "label+value+name",
-        "hole" : .4,
-        "type" : "pie"
-        },
-        ],
-    "layout" : {
-        "title" : "Top Cities Arrive/Departure 2012-2014",
-        "annotations" : [
-            {
-                "font" : {
-                    "size" : 20
-                },
-                "showarrow" : False,
-                "text" : "Arrive",
-                "x" : 0.2,
-                "y" : 0.5
-            },
-            {
-                "font" : {
-                    "size" : 20
-                },
-                "showarrow" : False,
-                "text" : "Departure",
-                "x" : 0.83,
-                "y" : 0.5
-            }
-        ]       
-    }            
+    "data": [{
+            "labels" : [top_cities_domes[run][0] for run in range(len(top_cities_domes)-2,len(top_cities_domes)-12,-1)],
+            "values" : [top_cities_domes[run][1] for run in range(len(top_cities_domes)-2,len(top_cities_domes)-12,-1)],
+            "type" : "pie"
+            }],
+    "layout" : {"title" : "Top Cities Domestic 2012-2014"}
 }
 
-tls.embed(py.plot(fig, filename='Top Cities Air Traffic 2012-2013'))
+tls.embed(py.plot(fig, filename='Top Cities Domestic 2012-2014'))
