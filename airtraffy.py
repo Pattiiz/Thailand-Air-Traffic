@@ -94,6 +94,5 @@ def sma_passenger():
     arr_psng = '%.0f' % (arr_psng / 3)
     dep_psng = '%.0f' % (dep_psng / 3)
     tst_psng = '%.0f' % (tst_psng / 3)
-    print(arr_psng, dep_psng, tst_psng)
     return [['arrive_inter_passenger', arr_psng], ['departure_inter_passenger', dep_psng]\
             , ['transit_passenger', tst_psng]]
