@@ -40,7 +40,6 @@ month = month_list()
 trace0 = go.Bar(
     x=[run for run in month],
     y=[summary_2014[run] for run in month],
-    #text=['27% market share', '24% market share', '19% market share'],
     marker=dict(
         color='rgb(158,202,225)',
         line=dict(
