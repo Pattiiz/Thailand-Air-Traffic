@@ -61,7 +61,7 @@ fig = {
             "values" : [top_cities_domes[run][1] for run in range(len(top_cities_domes)-2,len(top_cities_domes)-12,-1)],
             "type" : "pie"
             }],
-    "layout" : {"title" : "Top Cities Domestic 2012-2014"}
+    "layout" : {"title" : "Top Domestic Cities 2012-2014"}
 }
 
-tls.embed(py.plot(fig, filename='Top Cities Domestic 2012-2014'))
+tls.embed(py.plot(fig, filename='Top Domestic Cities 2012-2014'))
