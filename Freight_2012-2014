@@ -1,5 +1,10 @@
 """THAILAND AIR TRAFFIC STATISTIC ANALYSIS"""
 import csv
+import plotly.tools as tls
+import plotly.plotly as py
+import plotly.graph_objs as go
+py.sign_in('Pattiiz', 'ph2g5dyom6')
+
 def fetch_data_2014():
     """"""
     static = open("trafficstatic.csv", newline="")
@@ -344,22 +349,17 @@ def freight_dec():
     """"""
     num_0 = ('%0.f' %((freight_dec_2012()+freight_dec_2013()+freight_dec_2014())/3))
     return num_0
-freight_dec()
 
 def prin_graph():
-    import plotly.plotly as py
-    import plotly.graph_objs as go
-    trace0 = go.Bar(
-        x = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July',\
-           'August', 'September', 'October', 'November', 'December'],
-        y = [freight_jan(), freight_feb(), freight_mar(), freight_apr(),\
-             freight_may(), freight_june(), freight_july(), freight_aug(),\
-             freight_sep(), freight_oct(), freight_nov(), freight_dec()]
+    data = [
+            go.Bar(
+            x = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July',\
+               'August', 'September', 'October', 'November', 'December'],
+            y = [freight_jan(), freight_feb(), freight_mar(), freight_apr(),\
+                 freight_may(), freight_june(), freight_july(), freight_aug(),\
+                 freight_sep(), freight_oct(), freight_nov(), freight_dec()]
         )
     ]
-    plot_url = py.plot(data, filename='basic-bar')
+    return py.plot(data, filename='basic-bar')
 
-layout = go.Layout(
-    title='Freight in year 2012-2014',
-)
-prin_graph
+tls.embed(prin_graph())
