@@ -6,7 +6,7 @@ import plotly.graph_objs as go
 py.sign_in('Pattiiz', 'ph2g5dyom6')
 
 def fetch_data_2014():
-    """"""
+    """For import data year 2014 from excel"""
     static = open("trafficstatic.csv", newline="")
     data = csv.reader(static)
     static = [run for run in data]
@@ -17,7 +17,7 @@ def fetch_data_2014():
     return static_2014
 
 def fetch_data_2013():
-    """"""
+    """For import data year 2013 from excel"""
     static = open("trafficstatic.csv", newline="")
     data = csv.reader(static)
     static = [run for run in data]
@@ -28,7 +28,7 @@ def fetch_data_2013():
     return static_2013
 
 def fetch_data_2012():
-    """"""
+    """For import data year 2012 from excel"""
     static = open("trafficstatic.csv", newline="")
     data = csv.reader(static)
     static = [run for run in data]
@@ -291,66 +291,67 @@ def freight_dec_2014():
     return int(num_0)
 
 def freight_jan():
-    """"""
+    """For find the result of January year 2012-2014"""
     num_0 = ('%0.f' %((freight_jan_2012()+freight_jan_2013()+freight_jan_2014())/3))
     return num_0
 
 def freight_feb():
-    """"""
+    """For find the result of Febuary year 2012-2014"""
     num_0 = ('%0.f' %((freight_feb_2012()+freight_feb_2013()+freight_feb_2014())/3))
     return num_0
 
 def freight_mar():
-    """"""
+    """For find the result of March year 2012-2014"""
     num_0 = ('%0.f' %((freight_mar_2012()+freight_mar_2013()+freight_mar_2014())/3))
     return num_0
 
 def freight_apr():
-    """"""
+    """For find the result of April year 2012-2014"""
     num_0 = ('%0.f' %((freight_apr_2012()+freight_apr_2013()+freight_apr_2014())/3))
     return num_0
 
 def freight_may():
-    """"""
+    """For find the result of May year 2012-2014"""
     num_0 = ('%0.f' %((freight_may_2012()+freight_may_2013()+freight_may_2014())/3))
     return num_0
 
 def freight_june():
-    """"""
+    """For find the result of June year 2012-2014"""
     num_0 = ('%0.f' %((freight_june_2012()+freight_june_2013()+freight_june_2014())/3))
     return num_0
 
 def freight_july():
-    """"""
+    """For find the result of July year 2012-2014"""
     num_0 = ('%0.f' %((freight_july_2012()+freight_july_2013()+freight_july_2014())/3))
     return num_0
 
 def freight_aug():
-    """"""
+    """For find the result of August year 2012-2014"""
     num_0 = ('%0.f' %((freight_aug_2012()+freight_aug_2013()+freight_aug_2014())/3))
     return num_0
 
 def freight_sep():
-    """"""
+    """For find the result of September year 2012-2014"""
     num_0 = ('%0.f' %((freight_sep_2012()+freight_sep_2013()+freight_sep_2014())/3))
     return num_0
 
 def freight_oct():
-    """"""
+    """For find the result of October year 2012-2014"""
     num_0 = ('%0.f' %((freight_oct_2012()+freight_oct_2013()+freight_oct_2014())/3))
     return num_0
 
 def freight_nov():
-    """"""
+    """For find the result of November year 2012-2014"""
     num_0 = ('%0.f' %((freight_nov_2012()+freight_nov_2013()+freight_nov_2014())/3))
     return num_0
 
 def freight_dec():
-    """"""
+    """For find the result of December year 2012-2014"""
     num_0 = ('%0.f' %((freight_dec_2012()+freight_dec_2013()+freight_dec_2014())/3))
     return num_0
 
 def prin_graph():
+    """For print graph of result"""
     data = [
             go.Bar(
             x = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July',\
