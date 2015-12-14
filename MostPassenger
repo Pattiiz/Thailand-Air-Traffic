@@ -1,7 +1,7 @@
 """THAILAND AIR TRAFFIC STATISTIC ANALYSIS"""
 import csv
 def fetch_data_2014():
-    """"""
+    """For import data year 2014 from excel"""
     static = open("trafficstatic.csv", newline="")
     data = csv.reader(static)
     static = [run for run in data]
@@ -12,7 +12,7 @@ def fetch_data_2014():
     return static_2014
 
 def fetch_data_2013():
-    """"""
+    """For import data year 2013 from excel"""
     static = open("trafficstatic.csv", newline="")
     data = csv.reader(static)
     static = [run for run in data]
@@ -23,7 +23,7 @@ def fetch_data_2013():
     return static_2013
 
 def fetch_data_2012():
-    """"""
+    """For import data year 2012 from excel"""
     static = open("trafficstatic.csv", newline="")
     data = csv.reader(static)
     static = [run for run in data]
