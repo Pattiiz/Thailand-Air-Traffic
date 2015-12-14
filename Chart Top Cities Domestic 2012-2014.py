@@ -53,15 +53,18 @@ def merge(stat_1, stat_2):
         stat[i] = stat_1[i] + stat_2[i]
     return stat
 
-top_cities_domes = top_cities()
-top_cities_domes = top_cities_domes[2]
-fig = {
-    "data": [{
-            "labels" : [top_cities_domes[run][0] for run in range(len(top_cities_domes)-2,len(top_cities_domes)-12,-1)],
-            "values" : [top_cities_domes[run][1] for run in range(len(top_cities_domes)-2,len(top_cities_domes)-12,-1)],
-            "type" : "pie"
-            }],
-    "layout" : {"title" : "Top Domestic Cities 2012-2014"}
-}
+def chart_top_cities_domestic():
+    "Create Pie Chart Top Domestic Cities Arrive-Departure Passenger Years 2012-2014"
+    top_cities_domes = top_cities()
+    top_cities_domes = top_cities_domes[2]
+    fig = {
+        "data": [{
+                "labels" : [top_cities_domes[run][0] for run in range(len(top_cities_domes)-2,len(top_cities_domes)-12,-1)],
+                "values" : [top_cities_domes[run][1] for run in range(len(top_cities_domes)-2,len(top_cities_domes)-12,-1)],
+                "type" : "pie"
+                }],
+        "layout" : {"title" : "Top Domestic Cities 2012-2014"}
+    }
+    return py.plot(fig, filename='Top Domestic Cities 2012-2014')
 
-tls.embed(py.plot(fig, filename='Top Domestic Cities 2012-2014'))
+tls.embed(chart_top_cities_domestic())
