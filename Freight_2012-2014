@@ -1,0 +1,365 @@
+"""THAILAND AIR TRAFFIC STATISTIC ANALYSIS"""
+import csv
+def fetch_data_2014():
+    """"""
+    static = open("trafficstatic.csv", newline="")
+    data = csv.reader(static)
+    static = [run for run in data]
+    static_2014 = []
+    for run in static:
+        if run[3] == "2014":
+            static_2014.append(run)
+    return static_2014
+
+def fetch_data_2013():
+    """"""
+    static = open("trafficstatic.csv", newline="")
+    data = csv.reader(static)
+    static = [run for run in data]
+    static_2013 = []
+    for run in static:
+        if run[3] == "2013":
+            static_2013.append(run)
+    return static_2013
+
+def fetch_data_2012():
+    """"""
+    static = open("trafficstatic.csv", newline="")
+    data = csv.reader(static)
+    static = [run for run in data]
+    static_2012 = []
+    for run in static:
+        if run[3] == "2012":
+            static_2012.append(run)
+    return static_2012
+
+def freight_jan_2012():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "January":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_feb_2012():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "Febuary":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_mar_2012():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "March":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_apr_2012():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "April":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_may_2012():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "May":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_june_2012():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "June":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_july_2012():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "July":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_aug_2012():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "August":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_sep_2012():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "September":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_oct_2012():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "October":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_nov_2012():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "November":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_dec_2012():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "December":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_jan_2013():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2013():
+        if i[1] == "Freight" and i[4] == "January":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_feb_2013():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2013():
+        if i[1] == "Freight" and i[4] == "Febuary":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_mar_2013():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2013():
+        if i[1] == "Freight" and i[4] == "March":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_apr_2013():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2013():
+        if i[1] == "Freight" and i[4] == "April":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_may_2013():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2013():
+        if i[1] == "Freight" and i[4] == "May":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_june_2013():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2012():
+        if i[1] == "Freight" and i[4] == "June":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_july_2013():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2013():
+        if i[1] == "Freight" and i[4] == "July":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_aug_2013():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2013():
+        if i[1] == "Freight" and i[4] == "August":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_sep_2013():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2013():
+        if i[1] == "Freight" and i[4] == "September":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_oct_2013():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2013():
+        if i[1] == "Freight" and i[4] == "October":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_nov_2013():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2013():
+        if i[1] == "Freight" and i[4] == "November":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_dec_2013():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2013():
+        if i[1] == "Freight" and i[4] == "December":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_jan_2014():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2014():
+        if i[1] == "Freight" and i[4] == "January":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_feb_2014():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2014():
+        if i[1] == "Freight" and i[4] == "Febuary":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_mar_2014():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2014():
+        if i[1] == "Freight" and i[4] == "March":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_apr_2014():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2014():
+        if i[1] == "Freight" and i[4] == "April":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_may_2014():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2014():
+        if i[1] == "Freight" and i[4] == "May":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_june_2014():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2014():
+        if i[1] == "Freight" and i[4] == "June":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_july_2014():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2014():
+        if i[1] == "Freight" and i[4] == "July":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_aug_2014():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2014():
+        if i[1] == "Freight" and i[4] == "August":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_sep_2014():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2014():
+        if i[1] == "Freight" and i[4] == "September":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_oct_2014():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2014():
+        if i[1] == "Freight" and i[4] == "October":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_nov_2014():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2014():
+        if i[1] == "Freight" and i[4] == "November":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_dec_2014():
+    """Find the number of freight of the month"""
+    for i in fetch_data_2014():
+        if i[1] == "Freight" and i[4] == "December":
+            num_0 = i[6]
+    return int(num_0)
+
+def freight_jan():
+    """"""
+    num_0 = ('%0.f' %((freight_jan_2012()+freight_jan_2013()+freight_jan_2014())/3))
+    return num_0
+
+def freight_feb():
+    """"""
+    num_0 = ('%0.f' %((freight_feb_2012()+freight_feb_2013()+freight_feb_2014())/3))
+    return num_0
+
+def freight_mar():
+    """"""
+    num_0 = ('%0.f' %((freight_mar_2012()+freight_mar_2013()+freight_mar_2014())/3))
+    return num_0
+
+def freight_apr():
+    """"""
+    num_0 = ('%0.f' %((freight_apr_2012()+freight_apr_2013()+freight_apr_2014())/3))
+    return num_0
+
+def freight_may():
+    """"""
+    num_0 = ('%0.f' %((freight_may_2012()+freight_may_2013()+freight_may_2014())/3))
+    return num_0
+
+def freight_june():
+    """"""
+    num_0 = ('%0.f' %((freight_june_2012()+freight_june_2013()+freight_june_2014())/3))
+    return num_0
+
+def freight_july():
+    """"""
+    num_0 = ('%0.f' %((freight_july_2012()+freight_july_2013()+freight_july_2014())/3))
+    return num_0
+
+def freight_aug():
+    """"""
+    num_0 = ('%0.f' %((freight_aug_2012()+freight_aug_2013()+freight_aug_2014())/3))
+    return num_0
+
+def freight_sep():
+    """"""
+    num_0 = ('%0.f' %((freight_sep_2012()+freight_sep_2013()+freight_sep_2014())/3))
+    return num_0
+
+def freight_oct():
+    """"""
+    num_0 = ('%0.f' %((freight_oct_2012()+freight_oct_2013()+freight_oct_2014())/3))
+    return num_0
+
+def freight_nov():
+    """"""
+    num_0 = ('%0.f' %((freight_nov_2012()+freight_nov_2013()+freight_nov_2014())/3))
+    return num_0
+
+def freight_dec():
+    """"""
+    num_0 = ('%0.f' %((freight_dec_2012()+freight_dec_2013()+freight_dec_2014())/3))
+    return num_0
+freight_dec()
+
+def prin_graph():
+    import plotly.plotly as py
+    import plotly.graph_objs as go
+    trace0 = go.Bar(
+        x = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July',\
+           'August', 'September', 'October', 'November', 'December'],
+        y = [freight_jan(), freight_feb(), freight_mar(), freight_apr(),\
+             freight_may(), freight_june(), freight_july(), freight_aug(),\
+             freight_sep(), freight_oct(), freight_nov(), freight_dec()]
+        )
+    ]
+    plot_url = py.plot(data, filename='basic-bar')
+
+layout = go.Layout(
+    title='Freight in year 2012-2014',
+)
+prin_graph
