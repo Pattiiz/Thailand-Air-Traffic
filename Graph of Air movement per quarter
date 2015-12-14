@@ -44,34 +44,34 @@ def plot_aircraft_per_month():
 
     bkk, dmk, cnx, hkt = airmove_airport()
     trace1 = go.Scatter(
-        x=[1, 2, 3, 4, 5, 
+        x = [1, 2, 3, 4, 5, 
            6, 7, 8, 9, 10,
            11, 12],
-        y=bkk,
+        y = bkk,
         name = 'Suvarnabhumi airport',
         connectgaps=True
     )
     trace2 = go.Scatter(
-        x=[1, 2, 3, 4, 5, 
+        x = [1, 2, 3, 4, 5, 
            6, 7, 8, 9, 10,
            11, 12],
-        y=dmk,
+        y = dmk,
         name = 'Don Mueang airport',
         connectgaps=True
     )
     trace3 = go.Scatter(
-        x=[1, 2, 3, 4, 5, 
+        x = [1, 2, 3, 4, 5, 
            6, 7, 8, 9, 10,
            11, 12],
-        y=cnx,
+        y = cnx,
         name = 'Chiang Mai airport',
         connectgaps=True
     )
     trace4 = go.Scatter(
-        x=[1, 2, 3, 4, 5, 
+        x = [1, 2, 3, 4, 5, 
            6, 7, 8, 9, 10,
            11, 12],
-        y=hkt,
+        y = hkt,
         name = 'Phuket airport',
         connectgaps=True
     )
