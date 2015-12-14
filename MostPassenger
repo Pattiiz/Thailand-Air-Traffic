@@ -1,0 +1,161 @@
+"""THAILAND AIR TRAFFIC STATISTIC ANALYSIS"""
+import csv
+def fetch_data_2014():
+    """"""
+    static = open("trafficstatic.csv", newline="")
+    data = csv.reader(static)
+    static = [run for run in data]
+    static_2014 = []
+    for run in static:
+        if run[3] == "2014":
+            static_2014.append(run)
+    return static_2014
+
+def fetch_data_2013():
+    """"""
+    static = open("trafficstatic.csv", newline="")
+    data = csv.reader(static)
+    static = [run for run in data]
+    static_2013 = []
+    for run in static:
+        if run[3] == "2013":
+            static_2013.append(run)
+    return static_2013
+
+def fetch_data_2012():
+    """"""
+    static = open("trafficstatic.csv", newline="")
+    data = csv.reader(static)
+    static = [run for run in data]
+    static_2012 = []
+    for run in static:
+        if run[3] == "2012":
+            static_2012.append(run)
+    return static_2012
+
+def bkk_airport_2012():
+    """Find the number of the passenger in BKK airport in year 2012."""
+    num_0 = 0
+    for i in fetch_data_2012():
+        if i[0] == "BKK":
+            num_0 += int(i[6])
+    return num_0
+
+def dmk_airport_2012():
+    """Find the number of the passenger in DMK airport in year 2012."""
+    num_0 = 0
+    for i in fetch_data_2012():
+        if i[0] == "DMK":
+            num_0 += int(i[6])
+    return num_0
+
+def cnx_airport_2012():
+    """Find the number of the passenger in CNX airport in year 2012."""
+    num_0 = 0
+    for i in fetch_data_2012():
+        if i[0] == "CNX":
+            num_0 += int(i[6])
+    return num_0
+
+def hkt_airport_2012():
+    """Find the number of the passenger in HKT airport in year 2012."""
+    num_0 = 0
+    for i in fetch_data_2012():
+        if i[0] == "DMK":
+            num_0 += int(i[6])
+    return num_0
+
+def bkk_airport_2013():
+    """Find the number of the passenger in BKK airport in year 2013."""
+    num_0 = 0
+    for i in fetch_data_2013():
+        if i[0] == "BKK":
+            num_0 += int(i[6])
+    return num_0
+
+def dmk_airport_2013():
+    """Find the number of the passenger in DMK airport in year 20143."""
+    num_0 = 0
+    for i in fetch_data_2013():
+        if i[0] == "DMK":
+            num_0 += int(i[6])
+    return num_0
+
+def cnx_airport_2013():
+    """Find the number of the passenger in CNX airport in year 2013."""
+    num_0 = 0
+    for i in fetch_data_2013():
+        if i[0] == "CNX":
+            num_0 += int(i[6])
+    return num_0
+
+def hkt_airport_2013():
+    """Find the number of the passenger in HKT airport in year 2013."""
+    num_0 = 0
+    for i in fetch_data_2013():
+        if i[0] == "DMK":
+            num_0 += int(i[6])
+    return num_0
+
+def bkk_airport_2014():
+    """Find the number of the passenger in BKK airport in year 2014."""
+    num_0 = 0
+    for i in fetch_data_2014():
+        if i[0] == "BKK":
+            num_0 += int(i[6])
+    return num_0
+
+def dmk_airport_2014():
+    """Find the number of the passenger in DMK airport in year 2014."""
+    num_0 = 0
+    for i in fetch_data_2014():
+        if i[0] == "DMK":
+            num_0 += int(i[6])
+    return num_0
+
+def cnx_airport_2014():
+    """Find the number of the passenger in CNX airport in year 2014."""
+    num_0 = 0
+    for i in fetch_data_2014():
+        if i[0] == "CNX":
+            num_0 += int(i[6])
+    return num_0
+
+def hkt_airport_2014():
+    """Find the number of the passenger in HKT airport in year 2014."""
+    num_0 = 0
+    for i in fetch_data_2014():
+        if i[0] == "DMK":
+            num_0 += int(i[6])
+    return num_0
+hkt_airport_2014()
+
+def bkk_airport():
+    """Find the result of BKK airport"""
+    return ('%.0f' %((bkk_airport_2012()+bkk_airport_2013()+bkk_airport_2014())/3))
+
+def dmk_airport():
+    """Find the result of DMK airport"""
+    return ('%.0f' %((dmk_airport_2012()+dmk_airport_2013()+dmk_airport_2014())/3))
+
+def cnx_airport():
+    """Find the result of CNX airport"""
+    return ('%.0f' %((cnx_airport_2012()+cnx_airport_2013()+cnx_airport_2014())/3))
+
+def hkt_airport():
+    """Find the result of HKT airport"""
+    return ('%.0f' %((hkt_airport_2014()+hkt_airport_2014()+hkt_airport_2014())/3))
+
+def prin_data():
+    """For print the most number of data."""
+    if bkk_airport() > dmk_airport() and bkk_airport() > cnx_airport()\
+       and bkk_airport() > hkt_airport():
+        print("BKK", bkk_airport())
+    elif dmk_airport() > cnx_airport() and dmk_airport() > hkt_airport():
+        print("DMK", dmk_airport())
+    elif cnx_airport() > hkt_airport():
+        print("CNX", cnx_airport())
+    else:
+        print("HKT", airport())
+
+prin_data()
