@@ -6,6 +6,6 @@ Thailand air traffic is a data visualization about thailand air traffic static. 
 - CSV Module
 
 #Powered By
-- ธีร์จุฑา แก้วทอง 58070060 (Github : iamplaster),
-- ธิติพัทธ์ มานิตเฉลิมชัย 58070059 (Github : Pattiiz),
-- ณัฐพล ฉัตรวราวุฒิ 58070038 (Github : mozillaboss),
+- ธีร์จุฑา แก้วทอง 58070060 (Github : iamplaster)
+- ธิติพัทธ์ มานิตเฉลิมชัย 58070059 (Github : Pattiiz)
+- ณัฐพล ฉัตรวราวุฒิ 58070038 (Github : mozillaboss)
